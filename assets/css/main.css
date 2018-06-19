@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body{
+  font-family: 'Raleway', sans-serif;
+  background-color: #182536;
+}
+
+.active{
+  font-weight: bold;
+}
+
+/* Only to Facebook and Donations box on XS */
+.no-padding{
+  padding: 0;
+}
+
+/* --------------- FOOTER --------------- */
+footer{
+  padding-top: 50px;
+  padding-bottom: 35px;
+  border-top: 2px solid #8E8E8E;
+  background-image: linear-gradient(to bottom, #E8E8E8 0, #D2D2D2 100%);
+}
+
+.social {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#designer {
+  float: right;
+  position: relative;
+  top: 8px;
+}
+
+.social li {
+  background: none repeat scroll 0 0 #9F9F9F;
+  border: 2px solid #9F9F9F;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  float: left;
+  height: 36px;
+  line-height: 36px;
+  margin: 0 8px 0 0;
+  padding: 0;
+  text-align: center;
+  width: 36px;
+  transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+}
+.social li:hover {
+  transform: scale(1.2) rotate(360deg);
+  -webkit-transform: scale(1.2) rotate(360deg);
+  -moz-transform: scale(1.2) rotate(360deg);
+}
+.social li a {
+  color: #EDEFF1;
+  position: relative;
+  top: -3px;
+  left: -2px;
+}
+.social li:hover {
+  border: 2px solid #2c3e50;
+  background: #2c3e50;
+}
+.social li a i {
+  font-size: 16px;
+  margin: 0 0 0 5px;
+  color: #EDEFF1 !important;
+}
+/* --------------- /FOOTER --------------- */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  /* Facebook box have the same size that donations box */
+  .flex-row{
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+  }
+  .flex-row > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+  }
+  .flex-row-box {
+    height: 100%;
+    position: relative;
+  }
+  .center-container{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-5%, -50%);
+  }
+}
+
+@media (min-width: 992px) {
+
+  /* Comments box have the same heigth that aside */
+  .flex-row-comments{
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+  }
+  .flex-row-comments > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+  }
+  .flex-row-box-comments {
+    height: 100%;
+  }
+}
+
+/* --------------- LOADER --------------- */
+
+@-webkit-keyframes loadPages {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes loadPages {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  display: block;
+  position: relative;
+  visibility: visible;
+  height: 50px;
+
+}
+.loader:before {
+
+  content:'';
+  border-radius: 50%;
+  width:  60px;
+  height: 60px;
+  font-size: 10px;
+  text-indent: -9999em;
+
+  border-top: 2px solid rgba(194, 194, 194, 0.4);
+  border-right: 2px solid rgba(194, 194, 194, 0.4);
+  border-bottom: 2px solid rgba(194, 194, 194, 0.4);
+  border-left: 2px solid #182536;
+
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+
+  -webkit-animation: loadPages .75s infinite linear;
+  animation: loadPages .75s infinite linear;
+
+  display: block;
+  background: transparent;
+
+  position: absolute;
+  top:  50%;
+  left: 50%;
+  margin-top:  -30px;
+  margin-left: -30px;
+}
