@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root> 
   <bdo>
-	<version value="1.0.30.0" />
+	<version value="1.0.31.0" />
 	<download value="https://lyyloki.github.io/BDOverviewSetup.exe" />
 	<type value=".exe" />
 	<patchnote value=" "/>
